@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- scss -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark text-white">
+
+    <!-- navbar -->
+    <header>
+        <div class="container p-3">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg bg-body-secondary">
+                        <div class="container-fluid">
+                            <!-- Логотип -->
+                            <a class="navbar-brand" href="#">NEWS</a>
+
+                            <!-- Бургер -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Переключатель навигации">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Контент меню -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                <!-- Центрируем пункты -->
+                                <ul class="navbar-nav nav-underline mx-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Узбекистан</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Мир</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Общество</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Спорт</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Поиск справа -->
+                                <form class="d-none d-lg-flex ms-auto" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Поиск"
+                                        aria-label="Поиск">
+                                    <button class="btn btn-outline-danger" type="submit">Поиск</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container p-3">
+            <div class="row">
+                <div class="col">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Больше разделов
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body bg-dark text-white">
+                                    <div class="header-categories__wrapper bg-dark">
+                                        <ul class="header-categories__list bg-dark">
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Ta'lim</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Moliya</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Avto</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Sog'lom hayot</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Ko'chmas mulk</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Ayollar
+                                                    dunyosi</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Turizm</a>
+                                            </li>
+                                            <li class="header-categories__item">
+                                                <a href="#"
+                                                    class="header-categories__link text-white">Biznes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+
+    <!-- card -->
+    <div class="container p-3">
+        <div class="row">
+            <div class="col">
+                <h1>Главная новость дня</h1>
+                <div class="card mb-3 p-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://storage.kun.uz/source/thumbnails/_medium/11/Kd4jiMRF7Iq2UnecY_nJVUiFwWXTHGfe_medium.jpg"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5
+                                    class="card-title text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+                                    Переговоры Трампа и Путина на Аляске: прогресс без соглашения по Украине</h5>
+                                <p class="card-text">На Аляске завершились переговоры между президентами США Дональдом
+                                    Трампом и России Владимиром Путиным. Встреча длилась почти три часа и завершилась
+                                    без сделки по Украине, однако лидеры отметили определенный прогресс.</p>
+                                <p class="card-text"><small class="text-body-secondary">Последнее обновление 3 мин.
+                                        назад</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="list-group small-news mb-3 bg-dark">
+                    <li class="list-group-item"><a href="#">📌 Новость 1: Краткий заголовок</a></li>
+                    <li class="list-group-item"><a href="#">📌 Новость 2: Событие в мире</a></li>
+                    <li class="list-group-item"><a href="#">📌 Новость 3: Политика</a></li>
+                    <li class="list-group-item"><a href="#">📌 Новость 4: Экономика</a></li>
+                    <li class="list-group-item"><a href="#">📌 Новость 5: Спорт</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Последние новости</h1>
+                <div class="card-group">
+                    <div class="card">
+                        <img src="https://storage.kun.uz/source/11/ABmj7rrFoqG3B-J9JR15hNpfj7wOxS1J.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Цена бензина АИ-80 снова выросла</h5>
+                            <p class="card-text">На ряде АЗС стоимость бензина марки АИ-80 поднялась до 9 100 сумов.
+                                Таким образом, с 1 января прошлого года цена на эту марку топлива выросла на 50 %. Ранее
+                                представитель Антимонопольного комитета заявлял, что в случае удорожания вопрос о
+                                возврате спреда будет вынесен на повестку дня.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Последнее обновление 10 мин. назад</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://storage.kun.uz/source/11/7HotlsljxW2dMe2Av-nnZUjWsN0VPxlL.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Узбекистану потребуется более 100 лет, чтобы войти в число стран с
+                                высоким уровнем дохода — Всемирный банк</h5>
+                            <p class="card-text">По прогнозу ВБ, при текущих темпах роста Узбекистан достигнет уровня
+                                развитых стран по доходу на душу населения (14 тыс. долларов) позже всех остальных
+                                государств Центральной Азии.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Последнее обновление 40 мин. назад</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://storage.kun.uz/source/11/MfQyjnLiYTYRtxaQzCm3KGesJI1PcCJH.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">На некоторых улицах Ташкента планируется увеличение скорости движения
+                                до 80 км/ч</h5>
+                            <p class="card-text">Столичное Управление безопасности дорожного движения предложило
+                                повысить допустимую скорость на пяти улицах города с 60 до 80 км/ч. Если при этом
+                                вступит в силу порядок вычитания 10 км/ч из зафиксированной радарами скорости, то даже в
+                                центре города можно будет делать до 90 км/ч.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Последнее обновление 1 ч. назад</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 NEWS.UZ — Все права защищены</p>
+        </div>
+    </footer>
+
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+// 🎨 Переменные (цвета, шрифты)
+$primary: #007bff;
+$secondary: #6c757d;
+$dark: #0d1117;
+$light: #f8f9fa;
+$accent: #ff4757;
+
+$font-main: 'Segoe UI', Arial, sans-serif;
+$radius: 40px;
+$shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+// 🌍 Общие стили
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  background: linear-gradient(135deg, $dark 40%, #1e232b 100%);
+  color: $light;
+  line-height: 1.7;
+}
+
+// 🔝 Navbar
+.navbar {
+  border-radius: $radius;
+  background: rgba(151, 145, 145, 0.342) !important;
+  backdrop-filter: blur(12px);
+  padding: 0.8rem 1.5rem;
+  box-shadow: $shadow;
+
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: $light;
+    letter-spacing: 1px;
+  }
+
+  .nav-link {
+    color: $light;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &.active {
+      color: $accent;
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $accent;
+        bottom: -6px;
+        left: 0;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+// 📰 Заголовки
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: $accent;
+  margin: 1.5rem 0;
+}
+
+// 🗂️ Карточки новостей
+.card {
+  border: none;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  background: $light;
+  color: $dark;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+    color: $secondary;
+  }
+}
+
+// 📋 Маленькие новости
+.list-group {
+  border-radius: $radius;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+
+  .list-group-item {
+    background: transparent;
+    color: $light;
+    border: none;
+    padding: 0.8rem 1rem;
+    transition: background 0.3s;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+// ⚫ Footer
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  color: $light;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+// Переменные
+$primary-color: #0d6efd;
+$bg-color: #f8f9fa;
+$text-color: #495057;
+$border-color: #dee2e6;
+$hover-bg: rgba(13, 110, 253, 0.1);
+
+// Миксины
+@mixin scrollbar-styles {
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d $bg-color;
+  
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 2px;
+    
+    &:hover {
+      background: #495057;
+    }
+  }
+}
+
+// Основные стили
+.header-categories {
+  &__wrapper {
+    background: $bg-color;
+    border-bottom: 1px solid $border-color;
+    padding: 10px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    @include scrollbar-styles;
+    position: relative;
+  }
+  
+  &__list {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0 15px;
+    list-style: none;
+    white-space: nowrap;
+    min-width: max-content;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  &__item {
+    flex-shrink: 0;
+  }
+  
+  &__link {
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: block;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    
+    &:hover {
+      color: $primary-color;
+      background: $hover-bg;
+      border-color: rgba(13, 110, 253, 0.2);
+      transform: translateY(-1px);
+    }
+    
+    &:focus {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+    
+    &:active {
+      transform: translateY(0);
+      background: rgba(13, 110, 253, 0.2);
+    }
+    
+    &.active {
+      background: $primary-color;
+      color: white;
+      border-color: $primary-color;
+      
+      &:hover {
+        background: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+
+// accordion
+.accordion {
+  border-radius: $radius;
+  background: #ff4757;
+  overflow: hidden;
+  box-shadow: $shadow;
+}
+
+.accordion_item {
+  border: none;
+}

@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0d1117 40%, #1e232b 100%);
+  color: #f8f9fa;
+  line-height: 1.7;
+}
+
+.navbar {
+  border-radius: 40px;
+  background: rgba(151, 145, 145, 0.342) !important;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #f8f9fa;
+  letter-spacing: 1px;
+}
+.navbar .nav-link {
+  color: #f8f9fa;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: 0.3s;
+}
+.navbar .nav-link:hover {
+  color: #ff4757;
+}
+.navbar .nav-link.active {
+  color: #ff4757;
+  font-weight: 700;
+}
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff4757;
+  bottom: -6px;
+  left: 0;
+  border-radius: 2px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff4757;
+  margin: 1.5rem 0;
+}
+
+.card {
+  border: none;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+  color: #0d1117;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+.card .card-img-top {
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.card .card-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.list-group {
+  border-radius: 40px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+.list-group .list-group-item {
+  background: transparent;
+  color: #f8f9fa;
+  border: none;
+  padding: 0.8rem 1rem;
+  transition: background 0.3s;
+}
+.list-group .list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+.list-group .list-group-item a:hover {
+  color: #ff4757;
+}
+.list-group .list-group-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f8f9fa;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.header-categories__wrapper {
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d #f8f9fa;
+  position: relative;
+}
+.header-categories__wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+.header-categories__wrapper::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+.header-categories__wrapper::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 2px;
+}
+.header-categories__wrapper::-webkit-scrollbar-thumb:hover {
+  background: #495057;
+}
+.header-categories__list {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0 15px;
+  list-style: none;
+  white-space: nowrap;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-categories__item {
+  flex-shrink: 0;
+}
+.header-categories__link {
+  font-size: 14px;
+  color: #495057;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: block;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.header-categories__link:hover {
+  color: #0d6efd;
+  background: rgba(13, 110, 253, 0.1);
+  border-color: rgba(13, 110, 253, 0.2);
+  transform: translateY(-1px);
+}
+.header-categories__link:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+.header-categories__link:active {
+  transform: translateY(0);
+  background: rgba(13, 110, 253, 0.2);
+}
+.header-categories__link.active {
+  background: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+.header-categories__link.active:hover {
+  background: rgb(1.762295082, 87.2336065574, 213.237704918);
+  border-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+
+.accordion {
+  border-radius: 40px;
+  background: #ff4757;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.accordion_item {
+  border: none;
+}/*# sourceMappingURL=style.css.map */
